@@ -18,5 +18,7 @@ namespace ASPNET.Models
         public Product AssignCategory();
 
         public void DeleteProduct(Product product);
+
+        
     }
 }
