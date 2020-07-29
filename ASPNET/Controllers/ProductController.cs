@@ -49,6 +49,19 @@ namespace ASPNET.Controllers
             return RedirectToAction("ViewProduct", new { id = product.ProductID });
         }
 
+        public IActionResult insertProduct()
+        {
+            var prod = repo.AssignCategory();
+
+            return View(prod);
+        }
+
+        public IActionResult insertProductToDatabase(Product productToInsert)
+        {
+            repo.insertProduct(productToInsert);
+            return RedirectToAction("index");
+        }
+
     }
 }
 

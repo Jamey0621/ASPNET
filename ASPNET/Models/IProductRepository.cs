@@ -11,5 +11,10 @@ namespace ASPNET.Models
         public Product GetProduct(int id);
 
         public void UpdateProduct(Product product);
+
+        public void insertProduct(Product productToInsert);
+        public IEnumerable<Category> GetCategories();
+
+        public Product AssignCategory();
     }
 }
